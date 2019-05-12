@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
 import "./App.css";
 
 //router imports
@@ -10,25 +9,32 @@ import {
     NavLink
 } from "react-router-dom";
 
-import Home from "./components/Home";
-import About from "./components/About";
-import PayPalApi from "./components/PayPal";
-import Error from "./components/Error";
+import Home from "./Pages/Home";
+import About from "./Pages/About";
+import PayPalApi from "./Pages/PayPal";
+import Error from "./Pages/Error";
+import Layout from "./Components/Layout";
+import NavigationBar from "./Components/Navigation-topbar";
+import Jumbotron from "./Components/Jumbotron";
 
 class App extends Component {
     render() {
         return (
             <React.Fragment>
-                <Router>
-                    <div>
-                        <Switch>
-                            <Route exact path="/" component={Home} />
-                            <Route path="/About" component={About} />
-                            <Route path="/PayPal" component={PayPalApi} />
-                            <Route component={Error} />
-                        </Switch>
-                    </div>
-                </Router>
+				<NavigationBar/>
+				<Jumbotron/>
+                <Layout>
+                    <Router>
+                        <div>
+                            <Switch>
+                                <Route exact path="/" component={Home} />
+                                <Route path="/About" component={About} />
+                                <Route path="/PayPal" component={PayPalApi} />
+                                <Route component={Error} />
+                            </Switch>
+                        </div>
+                    </Router>
+                </Layout>
             </React.Fragment>
         );
     }
