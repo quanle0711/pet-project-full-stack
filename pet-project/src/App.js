@@ -13,9 +13,12 @@ import Home from "./Pages/Home";
 import About from "./Pages/About";
 import PayPalApi from "./Pages/PayPal";
 import Error from "./Pages/Error";
+import YoutubeAPI from "./Pages/YoutubeAPITest";
+
 import Layout from "./Components/Layout";
 import NavigationBar from "./Components/Navigation-topbar";
 import Jumbotron from "./Components/Jumbotron";
+
 
 class App extends Component {
     render() {
@@ -30,6 +33,7 @@ class App extends Component {
                                 <Route exact path="/" component={Home} />
                                 <Route path="/About" component={About} />
                                 <Route path="/PayPal" component={PayPalApi} />
+                                <Route path="/YoutubeApi" component={YoutubeAPI} />
                                 <Route component={Error} />
                             </Switch>
                         </div>
