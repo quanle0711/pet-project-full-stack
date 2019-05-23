@@ -7,7 +7,8 @@ const Styling = styled.div`
         background-color: #222;
     }
 
-    .navbar-brand, .navbar-nav .nav-link {
+    .navbar-brand,
+    .navbar-nav .nav-link {
         color: #bbb;
 
         &:hover {
@@ -19,7 +20,7 @@ const Styling = styled.div`
 const NavigationBar = () => {
     return (
         <Styling>
-            <Navbar  expand="lg">
+            <Navbar expand="lg">
                 <Navbar.Brand href="/">Quan Le</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -32,6 +33,9 @@ const NavigationBar = () => {
                         </Nav.Item>
                         <Nav.Item>
                             <Nav.Link href="/paypal">Pay Pal</Nav.Link>
+                        </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link href="/YoutubeApi">Youtube</Nav.Link>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
