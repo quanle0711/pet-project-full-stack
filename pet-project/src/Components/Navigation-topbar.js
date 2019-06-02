@@ -5,6 +5,7 @@ import styled from "styled-components";
 const Styling = styled.div`
     .navbar {
         background-color: #222;
+        
     }
 
     .navbar-brand,
@@ -20,7 +21,7 @@ const Styling = styled.div`
 const NavigationBar = () => {
     return (
         <Styling>
-            <Navbar expand="lg">
+            <Navbar expand="lg" fixed="top">
                 <Navbar.Brand href="/">Quan Le</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

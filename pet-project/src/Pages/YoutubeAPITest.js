@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
 import Form from "react-bootstrap/Form";
+import styled from "styled-components";
 
 const API_KEY = "AIzaSyDFyK14g41ldTRl8sKTWf4l4i2dkiDf-_k";
 const CLIENT_ID =
@@ -9,7 +10,22 @@ const CLIENT_ID =
 var resultNum = 10;
 var query = "";
 
-
+const Styling = styled.div`
+.container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    margin: 5px 0 ;
+}
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+`;
 
 class YoutubeAPI extends Component {
     constructor(props) {
@@ -17,23 +33,26 @@ class YoutubeAPI extends Component {
 
         this.state = {
             videoResults: [],
-            queryyt:"",
+            queryyt: "",
             isLoading: false
         };
         this.handleClick = this.handleClick.bind(this);
     }
 
     handleClick() {
-
-        var finalURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&type=video&q=${this.state.queryyt}&key=${API_KEY}&maxResults=${resultNum}`;
+        var finalURL = `https://www.googleapis.com/youtube/v3/search?part=snippet&order=relevance&type=video&q=${
+            this.state.queryyt
+        }&key=${API_KEY}&maxResults=${resultNum}`;
 
         this.setState({ isLoading: true }, () => {
             fetch(finalURL)
                 .then(res => res.json()) //convert to json
                 .then(resJson => {
-                    const vids = resJson.items
-                        .map(object => "https://youtube.com/embed/" + object.id.videoId);
-                    this.setState({ videoResults: vids });//maps video links to state
+                    const vids = resJson.items.map(
+                        object =>
+                            "https://youtube.com/embed/" + object.id.videoId
+                    );
+                    this.setState({ videoResults: vids }); //maps video links to state
                     console.log(this.state.videoResults);
                 })
                 .catch(err => {
@@ -43,12 +62,10 @@ class YoutubeAPI extends Component {
     }
 
     handleInputChange = event => {
-        this.setState({queryyt : event.target.value})
-    }
+        this.setState({ queryyt: event.target.value });
+    };
 
     render() {
-        //console.log(finalURL);
-
         return (
             <div>
                 <h1>Youtube API page</h1>
@@ -64,20 +81,30 @@ class YoutubeAPI extends Component {
                         <Button
                             variant="outline-success"
                             onClick={this.handleClick}
-                        >Search</Button>
+                        >
+                            Search
+                        </Button>
                     </InputGroup.Append>
                 </InputGroup>
 
-                <div>
-                    {
-                        this.state.videoResults.map((links, i) => {
-                            var frame = <div key={i}><iframe width="640" height="360" src={links} frameBorder="0" allowFullScreen></iframe></div>
-                            return frame;
-                        })
-                    }
+                <Styling>
+                    {this.state.videoResults.map((links, i) => {
+                        var frame = (
+                            <div className="container" key={i}>
+                                <iframe className="video"
+                                    width="100%"
+                                    height="auto"
+                                    src={links}
+                                    frameBorder="0"
+                                    allowFullScreen
+                                />
+                            </div>
+                        );
+                        return frame;
+                    })}
                     {this.frame}
-                </div>
-                <hr/>
+                </Styling>
+                <hr />
             </div>
         );
     }
