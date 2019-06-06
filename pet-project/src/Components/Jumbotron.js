@@ -23,15 +23,19 @@ const Styling = styled.div`
         right:0;
         z-index: -1;
     }
+
+    .buffer {
+        margin-top:5em;
+    }
 `;
 
 const Jumbotron = () => (
     <Styling>
         <Jumbo fluid className="jumbo">
             <div className="overlay"></div>
-            <Container>
+            <Container className="buffer">
                 <h1>Welcome</h1>
-                <p>A site for all my learning shenanigans and mischief</p>
+                <p>My website that stores my learning shenanigans and mischief</p>
             </Container>
         </Jumbo>
     </Styling>
