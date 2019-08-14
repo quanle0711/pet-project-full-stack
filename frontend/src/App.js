@@ -1,30 +1,23 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
+import { Container } from "react-bootstrap";
+import './App.css';
 
-//Styling imports
-import Container from "react-bootstrap/Container";
-import styled from "styled-components";
 
-//Image imports
-import coffeeImage from "./Assets/Images/stock-photo-main.jpg";
-
-//router imports
-import {
-    BrowserRouter as Router,
-    Route,
-    Switch,
-    NavLink
-} from "react-router-dom";
-//file imports
-import Jumbotron from "./Components/Jumbotron";
-
+import TopBar from './components/navbar';
 class App extends Component {
-    render() {
-        return (
-            <React.Fragment>
-                <Jumbotron />
-            </React.Fragment>
-        );
-    }
+
+	render() {
+		return (
+			<React.Fragment>
+				<TopBar />
+				<Container>
+					<div className="App">
+						<h1>hello world</h1>
+					</div>
+				</Container>
+			</React.Fragment>
+		);
+	}
 }
 
 export default App;
