@@ -5,12 +5,12 @@ import Jumbotron from "react-bootstrap/Jumbotron";
 import Container from "react-bootstrap/Container";
 const Styling = styled.div`
      {
-        @import url('https://fonts.googleapis.com/css?family=Lexend+Tera&display=swap');
-
+        @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
         .main-section {
-            height: 600px;
+            height: 60vh;
             position: relative;
             z-index: -2;
+            
         }
 
         .Jumbo {
@@ -22,7 +22,14 @@ const Styling = styled.div`
             position: relative;
             float: left;
             z-index: -2;
-            font-family: 'Lexend Tera', sans-serif;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .Jumbo h1 {
+            font-size:2.5rem;
+        }
+        .Jumbo p {
+            font-size:1.5rem;
         }
 
         .overlay {
@@ -46,7 +53,7 @@ class Home extends Component {
                     <Jumbotron className="Jumbo" fluid>
                         <div className="overlay" />
                         <Container>
-                            <h1>Hi! My name is Quan Le</h1>
+                            <h1>Hi, I'm Quan - I am a developer who specializes in</h1>
                             <p>
                                 Web Design
                                 <br />
