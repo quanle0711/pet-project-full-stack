@@ -8,7 +8,6 @@ const Styling = styled.div`
         @import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
         .main-section {
             height: 60vh;
-            position: relative;
             z-index: -2;
             
         }
@@ -19,7 +18,6 @@ const Styling = styled.div`
             background: url(${mainPhoto}) no-repeat fixed bottom;
             background-size: cover;
             color: #efefef;
-            position: relative;
             float: left;
             z-index: -2;
             font-family: 'Open Sans', sans-serif;
