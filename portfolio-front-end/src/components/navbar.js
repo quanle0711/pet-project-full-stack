@@ -85,6 +85,19 @@ const NavigationTop = () => {
                                 </Link>
                             </Nav.Link>
                         </Nav.Item>
+                        <Nav.Item>
+                            <Nav.Link>
+                                <Link
+                                    activeClass="active"
+                                    to="contact"
+                                    spy={true}
+                                    smooth={true}
+                                    duration={500}
+                                >
+                                    Contact Me
+                                </Link>
+                            </Nav.Link>
+                        </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

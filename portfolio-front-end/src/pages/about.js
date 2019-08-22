@@ -8,7 +8,7 @@ const Styling = styled.div`
         background-color: white;
         display: flex;
         flex-direction: row;
-        padding:1em 1em;
+        padding:2em 2em;
     }
     .left {
         width: 33%;
@@ -20,9 +20,25 @@ const Styling = styled.div`
         font-size: 1.2em;
         margin-left: 1%;
     }
+    ul {
+        list-style-none;
+        padding-left:0px;
+    }
     li {
         list-style: none;
     }
+
+    .accent2 {
+        font-family: 'Lexend Deca', sans-serif;
+        color: #69f0ae;
+    }
+
+    .accent {
+        background: linear-gradient(to right, #9c27b0 0%, #e91e63 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
     @media (max-width: 767px) {
         .about {
             flex-direction: column;
@@ -49,30 +65,49 @@ class About extends Component {
                             My Name is Quan, I Studied at Victoria University of
                             Wellington and graduated at 2018 with a Bachelor's
                             Degree majoring in Computer Science.
-    
+
                             I Write various software and web applications.
                             My specialties are front-end,full-stack & mobile application development.
-    
+
                         </p>
-                        <h3>Skillset</h3>
+                        <h2><span className="accent">
+                            Skillset
+                            </span>
+                        </h2>
                         <ul>
-                            <li>Languages:<br /> Javascript - HTML - CSS - Java - C# - Typescript - Swift - SQL
+                            <li>
+                                <span className="accent2">
+                                    Languages:
+                                    </span>
+                                <br /> Javascript - HTML - CSS - Java - C# - Typescript - Swift - SQL
                             </li>
                             <hr />
                             <li>
-                                Frameworks & Modules:<br /> ReactJS - Ionic - Angular - NodeJS - Gradle - Bootstrap - JSX - React Native
+                                <span className="accent2">
+                                    Framework & Modules:
+                                    </span>
+                                <br /> ReactJS - Ionic - Angular - NodeJS - Gradle - Bootstrap - JSX - React Native
                             </li>
                             <hr />
                             <li>
-                                Tools & Platforms:<br /> Amazon Web Services - Google Firebase - Heroku - Unity3D - PostgreSQL
+                            <span className="accent2">
+                                    Tools & Platforms:
+                                    </span>
+                                <br /> Amazon Web Services - Google Firebase - Heroku - Unity3D - PostgreSQL
                             </li>
                             <hr />
                             <li>
-                                Version Control:<br /> Git - GitHub
+                            <span className="accent2">
+                                    Version Control:
+                                    </span>
+                                <br /> Git - GitHub
                             </li>
                             <hr />
                             <li>
-                                Others:<br/> MS Office - Active Directory - Tosca test suite
+                            <span className="accent2">
+                                    Others:
+                                    </span>
+                                <br /> MS Office - Active Directory - Tosca test suite
                             </li>
                         </ul>
 

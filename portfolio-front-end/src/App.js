@@ -4,6 +4,7 @@ import NavigationTop from "./components/navbar";
 import Main from "./pages/main";
 import About from "./pages/about";
 import Projects from "./pages/projects";
+import Contact from "./pages/contact";
 import { Container } from "react-bootstrap";
 
 class App extends Component {
@@ -15,6 +16,7 @@ class App extends Component {
             <Main/>
             <About/>
             <Projects/>
+            <Contact/>
             </>
         );
     }
