@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-
+import CVfile from "../files/Quan_LE_CV_pdf_2019.pdf";
 
 const Styling = styled.div`
 
@@ -19,10 +19,11 @@ ul {
 li, li a {
     list-style: none;
     padding-top:1em;
-    &:hover {
-        color: #69f0ae;
+}
+
+li a:hover {
+    color: #69f0ae;
         text-decoration: none;
-    }
 }
 
 `;
@@ -43,6 +44,7 @@ class Contact extends Component {
                                 <ul>
                                     <li>Phone: 021 052 4016</li>
                                     <li>Email: quanlenz1998@gmail.com</li>
+                                    <li><a href ={CVfile} download="Quan_Le_CV-2019.pdf">Download my CV</a></li>
                                     <li> <a href="https://www.facebook.com/quan.le.0711z" target="_blank">
                                         Facebook
                                         </a>
@@ -56,7 +58,6 @@ class Contact extends Component {
                                         GitHub
                                         </a>
                                     </li>
-                                    <li>CV</li>
                                 </ul>
                             </Col>
                         </Row>
