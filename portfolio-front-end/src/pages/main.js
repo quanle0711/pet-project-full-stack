@@ -56,6 +56,22 @@ const Styling = styled.div`
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }
+
+    @media (max-width: 990px) { 
+        .main {
+            text-align:center;
+        }
+        .wrapper: height:auto;
+        .main h1 {
+            font-size:1.6em;
+        }
+        .main h2 {
+            font-size:1.3em;
+        } 
+        .main p {
+            font-size:0.9em;
+         9
+    }
 `;
 
 class Main extends Component {
@@ -66,11 +82,11 @@ class Main extends Component {
                     <div className="overlay" />
                     <Container className="wrapper">
                         <div className="fillerdiv" />
-                        <h2><span className="accent2">Hi there</span></h2>
+                        <h2><span className="accent2">Hi there..</span></h2>
                         <h1>
-                            My name is <span className="accent">Quan Le</span>.
+                            My name is <span className="accent">Quan Le</span>
                         </h1>
-                        <p>I am a <span className="accent2">&lt;Software Programmer&gt;</span> and a <span className="accent2">&lt;/Full Stack Developer&gt;</span></p>
+                        <p>I am a <span className="accent2">Software Developer</span></p>
                     </Container>
                 </Jumbotron>
             </Styling>

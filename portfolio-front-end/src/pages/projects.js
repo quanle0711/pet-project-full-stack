@@ -8,6 +8,8 @@ import { Container } from "react-bootstrap";
 import MainImage from "../images/projectsJumbo.jpg";
 
 const Styling = styled.div`
+
+
 .projects {
     height: auto;
     background: url(${MainImage}) no-repeat fixed bottom;
@@ -17,7 +19,9 @@ const Styling = styled.div`
     z-index: -2;
     font-size: 1.2em;
     margin-bottom:0px;
-    padding:2em;
+    padding:1em;
+    text-align:justify;
+    text-justify:inter-character;
 }
 
 .project {
@@ -36,26 +40,15 @@ h2 {
     margin-left:0;
 }
 
-p {
-    padding-bottom:1em;
-}
-
-
 .bottom-text {
+    padding-top:1em;
     background:rgba(200, 200, 200, 0.8);
-    padding:1em;
-}
-
-.bottom-text p {
-    padding-bottom:0;
 }
 
 
 @media (max-width: 990px) { 
-
-    text-align:center;
     .projects {
-        font-size:1em;
+        font-size:0.8em;
     }
     .buttons {
         flex-direction:column;
@@ -88,9 +81,9 @@ class Projects extends Component {
                                 </p>
 
                                 <ButtonToolbar className="buttons">
-                                    <Button disabled variant="primary">Code not live</Button>
-                                    <Button variant="success" href="https://github.com/quanle0711/Mock-Messenger-React" target="_blank" >View Source(React)</Button>
-                                    <Button variant="success" href="https://github.com/quanle0711/MockMessengerIonic" target="_blank" >View Source(Ionic)</Button>
+                                    <Button size="sm" disabled variant="primary">Code not live</Button>
+                                    <Button size="sm" variant="success" href="https://github.com/quanle0711/Mock-Messenger-React" target="_blank" >View Source(React)</Button>
+                                    <Button size="sm" variant="success" href="https://github.com/quanle0711/MockMessengerIonic" target="_blank" >View Source(Ionic)</Button>
 
                                 </ButtonToolbar>
                             </Col>
@@ -116,7 +109,7 @@ class Projects extends Component {
 
 
                                 <ButtonToolbar className="buttons">
-                                    <Button disabled variant="success" href="#" target="_blank" >GitHub/Source private</Button>
+                                    <Button size="sm" disabled variant="success" href="#" target="_blank" >GitHub/Source private</Button>
 
 
                                 </ButtonToolbar>
@@ -142,7 +135,7 @@ class Projects extends Component {
                                 </p>
 
                                 <ButtonToolbar className="buttons">
-                                    <Button variant="success" href="https://github.com/quanle0711/pet-project-full-stack/tree/master/pet-project" target="_blank" >View Source</Button>
+                                    <Button size="sm" variant="success" href="https://github.com/quanle0711/pet-project-full-stack/tree/master/pet-project" target="_blank" >View Source</Button>
                                 </ButtonToolbar>
                             </Col>
                         </Row>

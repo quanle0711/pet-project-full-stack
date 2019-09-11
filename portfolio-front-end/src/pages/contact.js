@@ -26,6 +26,15 @@ li a:hover {
         text-decoration: none;
 }
 
+@media (max-width: 990px) {
+    font-size: 0.8em;
+
+    h2 {
+        font-size:1.5em;
+    }
+
+}
+
 `;
 
 class Contact extends Component {
@@ -36,26 +45,46 @@ class Contact extends Component {
                     <Container>
                         <Row>
                             <Col md="6">
-                                <h2>
-                                    Reach out to me
-                                </h2>
+                                <h2>Reach out to me</h2>
                             </Col>
                             <Col md="6">
                                 <ul>
                                     <li>Phone: 021 052 4016</li>
                                     <li>Email: quanlenz1998@gmail.com</li>
-                                    <li><a href ={CVfile} download="Quan_Le_CV-2019.pdf">Download my CV</a></li>
-                                    <li> <a href="https://www.facebook.com/quan.le.0711z" target="_blank">
-                                        Facebook
+                                    <li>
+                                        <a
+                                            href={CVfile}
+                                            download="Quan_Le_CV-2019.pdf"
+                                        >
+                                            Download my CV
+                                        </a>
+                                    </li>
+                                    <li>
+                                        {" "}
+                                        <a
+                                            href="https://www.facebook.com/quan.le.0711z"
+                                            target="_blank"
+                                        >
+                                            Facebook
                                         </a>
                                     </li>
 
-                                    <li> <a href="https://www.linkedin.com/in/quan-le-aa2a88187/" target="_blank">
-                                        LinkedIn
+                                    <li>
+                                        {" "}
+                                        <a
+                                            href="https://www.linkedin.com/in/quanle-dev/"
+                                            target="_blank"
+                                        >
+                                            LinkedIn
                                         </a>
                                     </li>
-                                    <li> <a href="https://github.com/quanle0711" target="_blank">
-                                        GitHub
+                                    <li>
+                                        {" "}
+                                        <a
+                                            href="https://github.com/quanle0711"
+                                            target="_blank"
+                                        >
+                                            GitHub
                                         </a>
                                     </li>
                                 </ul>

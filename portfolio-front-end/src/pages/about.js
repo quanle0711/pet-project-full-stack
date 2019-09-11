@@ -39,13 +39,23 @@ const Styling = styled.div`
         -webkit-text-fill-color: transparent;
     }
 
-    @media (max-width: 767px) {
+    @media (max-width: 990px) {
+
+        .about {
+            text-align:justify;
+            text-justify:inter-word;
+            font-size:0.7em;
+        }
+
+        .about .left h1 {
+            font-size:1.8em;
+        }
+
         .about {
             flex-direction: column;
         }
         .left,
         .right {
-            text-align:center;
             width: 100%;
             margin: 1% 0;
         }
@@ -64,53 +74,50 @@ class About extends Component {
                         <p>
                             My Name is Quan, I Studied at Victoria University of
                             Wellington and graduated at 2018 with a Bachelor's
-                            Degree majoring in Computer Science.
-
-                            I Write various software and web applications.
-                            My specialties are front-end,full-stack & mobile application development.
-
+                            Degree majoring in Computer Science. I Write various
+                            software and web applications. My specialties are
+                            front-end,full-stack & mobile application
+                            development.
                         </p>
-                        <h2><span className="accent">
-                            Skillset
-                            </span>
+                        <h2>
+                            <span className="accent">Skillset</span>
                         </h2>
                         <ul>
                             <li>
-                                <span className="accent2">
-                                    Languages:
-                                    </span>
-                                <br /> Javascript - HTML - CSS - Java - C# - Typescript - Swift - SQL
+                                <span className="accent2">Languages:</span>
+                                <br /> Javascript - HTML - CSS - Java - C# -
+                                Typescript - Swift - SQL
                             </li>
-                            <hr />
+                            
                             <li>
                                 <span className="accent2">
                                     Framework & Modules:
-                                    </span>
-                                <br /> ReactJS - Ionic - Angular - NodeJS - Gradle - Bootstrap - JSX - React Native
+                                </span>
+                                <br /> ReactJS - Ionic - Angular - NodeJS -
+                                Gradle - Bootstrap - JSX - React Native
                             </li>
-                            <hr />
+                            
                             <li>
-                            <span className="accent2">
+                                <span className="accent2">
                                     Tools & Platforms:
-                                    </span>
-                                <br /> Amazon Web Services - Google Firebase - Heroku - Unity3D - PostgreSQL
+                                </span>
+                                <br /> Amazon Web Services - Google Firebase -
+                                Heroku - Unity3D - PostgreSQL
                             </li>
-                            <hr />
+                            
                             <li>
-                            <span className="accent2">
+                                <span className="accent2">
                                     Version Control:
-                                    </span>
+                                </span>
                                 <br /> Git - GitHub
                             </li>
-                            <hr />
+                            
                             <li>
-                            <span className="accent2">
-                                    Others:
-                                    </span>
-                                <br /> MS Office - Active Directory - Tosca test suite
+                                <span className="accent2">Others:</span>
+                                <br /> MS Office - Active Directory - Tosca test
+                                suite
                             </li>
                         </ul>
-
                     </div>
                 </Container>
             </Styling>
